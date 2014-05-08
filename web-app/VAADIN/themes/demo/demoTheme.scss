@@ -1,0 +1,62 @@
+@import '../reindeer/reindeer.scss';
+
+@mixin demoTheme {
+  @include reindeer;
+
+  .prueba-color {
+    color: #000000;
+
+    &[width-range="0-100px"] {
+      color: #00cc00;
+    }
+
+    &[width-range="101px-200px"] {
+      color: #0000cc;
+    }
+
+    &[width-range="200px-350px"] {
+      color: #cc0000;
+    }
+
+    &[width-range="351px-500px"] {
+      color: #cccc00;
+    }
+
+    &[width-range="501px-700px"] {
+      color: #00cccc;
+    }
+
+    &[width-range="701px-"] {
+      color: #cc00cc;
+    }
+  }
+
+  .prueba-size {
+    padding: 1em;
+    line-height: 1.5;
+
+    &[width-range="0-100px"] {
+      font-size: 10px;
+    }
+
+    &[width-range="101px-200px"] {
+      font-size: 12px;
+    }
+
+    &[width-range="200px-350px"] {
+      font-size: 14px;
+    }
+
+    &[width-range="351px-500px"] {
+      font-size: 18px;
+    }
+
+    &[width-range="501px-700px"] {
+      font-size: 24px;
+    }
+
+    &[width-range="701px-"] {
+      font-size: 30px;
+    }
+  }
+}
